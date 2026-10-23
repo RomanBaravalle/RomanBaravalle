@@ -3,10 +3,10 @@ email: baravalledatascientist@gmail.com
 description: >- # This is your main meta description for Google
   Empowering TEAMS to own their data journey. Expert Data Science services in 
   Data Management, Analysis, and Automation.
-url: "https://romandatascience.github.io"
-baseurl: "/BaravalleDataSolver"
+url: "http://www.romanbaravalle.com/"
+baseurl: "/romanbaravalle"
 # twitter_username: yourtwitter
-github_username:  RomanDataScience
+github_username:  RomanBaravalle
 
 # SEO Settings
 plugins:
