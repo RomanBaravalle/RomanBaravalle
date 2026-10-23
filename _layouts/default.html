@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0070f3;
+      --secondary: #0a2540;
+      --accent: #00d4ff;
+      --bg-light: #ffffff;
+      --bg-offset: #f9fafb;
+      --text-main: #1f2937;
+      --text-light: #6b7280;
+      --max-width: 1000px; /* Controls the text margins */
+    }
+
+    body { 
+      margin: 0; padding: 0; 
+      font-family: 'Inter', sans-serif; 
+      line-height: 1.6; color: var(--text-main);
+      background-color: var(--bg-light);
+    }
+
+    /* Layout Containers for Margins */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 60px; /* Deep side margins */
+    }
+    
+    .section { padding: 100px 0; }
+    .bg-offset { background-color: var(--bg-offset); }
+
+    /* Header Styling */
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+    }
+    
+    .brand img { height: 50px; width: auto; }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--secondary);
+      line-height: 1.1;
+    }
+
+    .brand-title {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    /* Navigation */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+
+    .nav-item { position: relative; margin-left: 25px; }
+
+    .nav-item a {
+      font-weight: 600;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: white;
+      min-width: 200px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      padding: 10px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: var(--bg-offset);
+      color: var(--primary);
+    }
+
+    .btn-nav {
+      background: var(--secondary);
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+
+    /* Hero & Grid Helpers */
+    .hero { background: var(--secondary); color: white; padding: 100px 0; }
+    .hero-content { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+
+    footer { background: var(--secondary); color: #9ca3af; padding: 80px 0; margin-top: 60px; }
+    footer h3 { color: white; margin-bottom: 20px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 25px; }
+      .hero-content { grid-template-columns: 1fr; text-align: center; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-wrapper">
+    <a href="{{ '/' | relative_url }}" class="brand">
+      <img src="{{ '/assets/logo.png' | relative_url }}" alt="Logo">
+      <div class="brand-text">
+        <span class="brand-name">Ph.D. in Physics & Neuroscientist</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="nav-item"><a href="{{ '/mission' | relative_url }}">Mission</a></li>
+        <li class="nav-item"><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li class="nav-item">
+          <a href="#">Services <small>▼</small></a>
+          <div class="dropdown-menu">
+            <a href="{{ '/services/management' | relative_url }}">Data Management</a>
+            <a href="{{ '/services/analysis' | relative_url }}">Data Analysis</a>
+            <a href="{{ '/services/automation' | relative_url }}">Data Automation</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="{{ '/contact' | relative_url }}" class="btn-nav">Work With Me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer>
+  <div class="container">
+    <div class="grid-3">
+      <div>
+        <h3>Roman Baravalle, Ph.D.</h3>
+        <p>Scientific rigor applied to complex & massive data.</p>
+      </div>
+      <div>
+        <h4 style="color:white">Quick Links</h4>
+        <p><a href="{{ '/mission' | relative_url }}">Mission</a></p>
+        <p><a href="{{ '/about' | relative_url }}">About Me</a></p>
+      </div>
+      <div>
+        <h4 style="color:white">Contact</h4>
+        <p>baravalledatascientist@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
