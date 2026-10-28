@@ -2,6 +2,7 @@
 layout: default
 title: Contact
 permalink: /contact/
+description: Book a free 30-minute consult with Dr. Roman Baravalle about EEG analysis for your clinical trial or study.
 ---
 
 <div class="section">

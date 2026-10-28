@@ -3,12 +3,29 @@ email: baravalleroman@gmail.com
 description: >- # This is your main meta description for Google
   Clinical EEG analysis for Parkinson's disease and cognitive decline. Brain
   recordings, turned into evidence that strengthens your trials.
-url: "http://www.romanbaravalle.com/"
+url: "https://www.romanbaravalle.com"
 baseurl: ""
 # twitter_username: yourtwitter
 github_username:  RomanBaravalle
 
 # SEO Settings
+author: Dr. Roman Baravalle
+# Default keywords; pages override them with their own `tags`
+keywords:
+  - Clinical EEG
+  - EEG analysis
+  - Quantitative EEG
+  - EEG biomarkers
+  - Parkinson’s disease
+  - Cognitive decline
+  - Clinical trials
+  - Drug effects on the brain
+  - Neuroscientist
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/ProfilePicture.png
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -18,7 +35,6 @@ header_pages:
   - about.md
   - portfolio.md
 
-# # Exclude verification file
-# exclude:
-#   - google6106a106b1e2c397.html
+exclude:
+  - "about(1).md"
 

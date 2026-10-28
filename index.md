@@ -54,6 +54,8 @@ permalink: /
 
     <div style="margin-top: 30px; text-align: center;">
       <a href="{{ '/portfolio/parkinsons-eeg-biomarkers/' | relative_url }}" style="background: var(--secondary); color: white; padding: 15px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block;">See it in practice: Parkinson’s case study</a>
+      <br>
+      <a href="{{ '/contact' | relative_url }}" style="background: var(--primary); color: white; padding: 15px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 15px;">Book a free consult today!</a>
     </div>
   </div>
 </div>

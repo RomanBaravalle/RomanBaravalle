@@ -3,13 +3,23 @@ layout: default
 title: Modelling how acetylcholine switches a hippocampal neuron into persistent firing
 permalink: /portfolio/acetylcholine-ca1-model/
 description: A detailed CA1 pyramidal neuron model fitted to control and carbachol recordings to find which ion-channel changes explain the switch into persistent firing.
+case_study: true
+order: 2
+summary: A detailed model of a hippocampal CA1 pyramidal neuron, fitted to recordings made before and during the cholinergic agonist carbachol, to find which ion-channel changes explain the switch into persistent firing.
+tags:
+  - Computational neuroscience
+  - Biophysical modelling
+  - NEURON
+  - Parameter fitting (CMA-ES)
+  - HPC
+  - Python
 ---
 
 <div class="section">
   <div class="container case-study">
     <p><a href="{{ '/portfolio/' | relative_url }}" style="color:var(--primary); text-decoration:none;">&larr; Portfolio</a></p>
     <h2 style="font-size: 2.2rem; color: var(--secondary); line-height: 1.25; margin-bottom: 10px;">Modelling how acetylcholine switches a hippocampal neuron into persistent firing</h2>
-    <p class="tags">Computational neuroscience · Biophysical modelling · NEURON · Parameter fitting (CMA-ES) · HPC · Python</p>
+    <p class="tags">{{ page.tags | join: " · " }}</p>
 
     <p style="font-size: 1.2rem; font-style: italic; color: var(--secondary);">A detailed model of a hippocampal CA1 pyramidal neuron, fitted to recordings made before and during the cholinergic agonist carbachol, to find which ion-channel changes explain the switch into persistent firing, and to check that the explanation holds across cells and fitting runs.</p>
 

@@ -4,7 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo title=false %}
-  <title>{{ site.title }}</title>
+  <title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+  {% if page.url == "/portfolio/" %}
+    {% assign keywords = site.pages | where: "case_study", true | map: "tags" | uniq %}
+  {% else %}
+    {% assign keywords = page.tags | default: site.keywords %}
+  {% endif %}
+  <meta name="keywords" content="{{ keywords | join: ', ' | escape }}">
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roman Baravalle",
+    "honorificPrefix": "Dr.",
+    "jobTitle": "Clinical EEG neuroscientist",
+    "url": "{{ site.url }}",
+    "image": "{{ '/assets/ProfilePicture.png' | absolute_url }}",
+    "email": "mailto:{{ site.email }}",
+    "alumniOf": "National University of La Plata",
+    "sameAs": ["https://github.com/{{ site.github_username }}"],
+    "knowsAbout": {{ site.keywords | jsonify }}
+  }
+  </script>
+  {% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -164,6 +187,7 @@
     /* Portfolio */
     .tags { color: var(--primary); font-weight: 600; font-size: 0.9rem; }
     .case-study { max-width: 1100px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
+    .case-study h1, .case-study h2 { color: var(--secondary); line-height: 1.25; }
     .case-study h3 { color: var(--secondary); margin-top: 40px; }
     .case-study li { margin-bottom: 10px; }
     .references { font-size: 0.9rem; color: var(--text-light); padding-left: 0; list-style: none; }

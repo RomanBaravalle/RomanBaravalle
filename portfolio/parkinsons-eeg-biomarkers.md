@@ -3,13 +3,23 @@ layout: default
 title: Resting-state EEG biomarkers of cognitive decline in Parkinson's disease
 permalink: /portfolio/parkinsons-eeg-biomarkers/
 description: A reproducible resting-state EEG pipeline tested on 522 recordings from four independent datasets to spot cognitive decline in Parkinson's disease earlier.
+case_study: true
+order: 1
+summary: A few minutes of EEG at rest, analyzed with a pipeline tested on 522 recordings from four independent datasets, to help a major Argentine public hospital spot cognitive decline in Parkinson’s patients earlier.
+tags:
+  - Clinical EEG
+  - Parkinson’s disease
+  - Biomarkers
+  - Reproducible pipeline
+  - Python
+  - Machine learning
 ---
 
 <div class="section">
   <div class="container case-study">
     <p><a href="{{ '/portfolio/' | relative_url }}" style="color:var(--primary); text-decoration:none;">&larr; Portfolio</a></p>
     <h2 style="font-size: 2.2rem; color: var(--secondary); line-height: 1.25; margin-bottom: 10px;">Resting-state EEG biomarkers of cognitive decline in Parkinson’s disease</h2>
-    <p class="tags">Clinical EEG · Parkinson’s disease · Biomarkers · Reproducible pipeline · Python · Machine learning</p>
+    <p class="tags">{{ page.tags | join: " · " }}</p>
 
     <p style="font-size: 1.2rem; font-style: italic; color: var(--secondary);">A few minutes of EEG at rest, analyzed with a pipeline tested on 522 recordings from four independent datasets, to help a major Argentine public hospital spot cognitive decline in Parkinson’s patients earlier.</p>
 
@@ -44,7 +54,7 @@ description: A reproducible resting-state EEG pipeline tested on 522 recordings 
     <p>The work doesn’t depend on me to keep going:</p>
     <ul>
       <li><strong>A trained analyst.</strong> I trained a team member to understand every step of the pipeline and run the full analysis on their own, from raw EEG to results. New patient data can be processed in-house without outside help.</li>
-      <li><strong>Open, reusable code.</strong> The complete pipeline is in a public repository. Because it runs from a single command, the same analysis can be repeated on new recordings, extended with new measures, or checked independently by others.</li>
+      <li><strong>Open, reusable code.</strong> The complete pipeline is in a <a href="https://github.com/RomanBaravalle/Parkinson_rsEEG">public repository</a>. Because it runs from a single command, the same analysis can be repeated on new recordings, extended with new measures, or checked independently by others.</li>
       <li><strong>Next step: a clinical trial.</strong> A clinical trial protocol has been submitted to the hospital’s Institutional Review Board (IRB) to test this methodology in its own Parkinson’s population.</li>
     </ul>
 
