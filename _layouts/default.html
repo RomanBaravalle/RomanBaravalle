@@ -18,7 +18,7 @@
       --bg-offset: #f9fafb;
       --text-main: #1f2937;
       --text-light: #6b7280;
-      --max-width: 1000px; /* Controls the text margins */
+      --max-width: 1400px; /* Content stops growing past this on very wide screens */
     }
 
     body { 
@@ -32,7 +32,7 @@
     .container {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 60px; /* Deep side margins */
+      padding: 0 5%; /* Side margins scale with the window */
     }
     
     .section { padding: 100px 0; }
@@ -161,7 +161,7 @@
 
     /* Portfolio */
     .tags { color: var(--primary); font-weight: 600; font-size: 0.9rem; }
-    .case-study { max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
+    .case-study { max-width: 1100px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
     .case-study h3 { color: var(--secondary); margin-top: 40px; }
     .case-study li { margin-bottom: 10px; }
     .references { font-size: 0.9rem; color: var(--text-light); padding-left: 0; list-style: none; }

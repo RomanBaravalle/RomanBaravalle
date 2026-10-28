@@ -45,6 +45,7 @@ description: A reproducible resting-state EEG pipeline tested on 522 recordings 
     <ul>
       <li><strong>A trained analyst.</strong> I trained a team member to understand every step of the pipeline and run the full analysis on their own, from raw EEG to results. New patient data can be processed in-house without outside help.</li>
       <li><strong>Open, reusable code.</strong> The complete pipeline is in a public repository. Because it runs from a single command, the same analysis can be repeated on new recordings, extended with new measures, or checked independently by others.</li>
+      <li><strong>Next step: a clinical trial.</strong> A clinical trial protocol has been submitted to the hospital’s Institutional Review Board (IRB) to test this methodology in its own Parkinson’s population.</li>
     </ul>
 
     <h3>References</h3>
