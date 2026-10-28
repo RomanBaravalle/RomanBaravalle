@@ -141,7 +141,8 @@
 
     /* Hero & Grid Helpers */
     .hero { background: var(--secondary); color: white; padding: 100px 0; }
-    .hero-content { display: grid; grid-template-columns: 1fr auto; gap: 50px; align-items: center; text-align: justify; }
+    .hero .container { max-width: 1600px; }
+    .hero-content { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: center; text-align: justify; }
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
     .card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
 
@@ -192,6 +193,7 @@
         <li class="nav-item"><a href="{{ '/' | relative_url }}">Home</a></li>
         <li class="nav-item"><a href="{{ '/about' | relative_url }}">About Me</a></li>
         <li class="nav-item"><a href="{{ '/portfolio' | relative_url }}">Portfolio</a></li>
+        <li class="nav-item"><a href="{{ '/contact' | relative_url }}" class="btn-nav">Book a consult</a></li>
       </ul>
     </nav>
   </div>

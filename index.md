@@ -18,7 +18,7 @@ permalink: /
       </div>
     </div>
     <p class="stats">
-      10+ years with patient EEG · 500+ recordings analyzed on Parkinson’s and cognitive decline · 15 peer-reviewed papers · PhD in Physics
+      10+ years with EEG and other brain signals · 500+ EEG recordings analyzed on Parkinson’s and cognitive decline · 15 peer-reviewed papers · PhD in Physics
     </p>
   </div>
 </div>
@@ -48,7 +48,7 @@ permalink: /
       <li><strong>Understand your question.</strong> We start with your trial, your patients and your decision. What do you need to prove, and to whom?</li>
       <li><strong>Design the analysis.</strong> I turn that question into a clear analysis plan: endpoints, measures and success criteria, agreed before any data is touched.</li>
       <li><strong>Extract the evidence.</strong> I clean and analyze your EEG with methods that go beyond standard measures, to find the signal that matters for your question.</li>
-      <li><strong>Stress-test the results.</strong> Every finding is checked for robustness and, where possible, replicated in independent data, before it reaches your team.</li>
+      <li><strong>Stress-test the results.</strong> Every finding is checked for robustness before it reaches your team.</li>
       <li><strong>Deliver and hand over.</strong> You receive a clear report, figures ready for partners and regulators, and documented code your team can run and extend.</li>
     </ol>
 
