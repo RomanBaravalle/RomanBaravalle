@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}
+  {% seo title=false %}
+  <title>{{ site.title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -144,6 +145,27 @@
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
     .card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
 
+    /* Home folds */
+    .hero-subtitle { font-size: 1.3rem; font-weight: 600; color: var(--accent); margin: 0 0 15px; }
+    .hero-tagline { font-size: 1.15rem; font-style: italic; opacity: 0.85; margin: 0; }
+    .stats { border-top: 1px solid rgba(255,255,255,0.15); margin-top: 60px; padding-top: 30px; font-size: 1rem; opacity: 0.85; }
+    .fold-heading { font-size: 2.2rem; color: var(--secondary); line-height: 1.25; margin: 0 0 25px; }
+    .fold-lead { font-size: 1.2rem; line-height: 1.7; }
+    .problem-list { list-style: none; padding: 0; margin: 30px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .problem-list li { background: white; border: 1px solid #e5e7eb; border-left: 4px solid var(--primary); border-radius: 8px; padding: 20px 25px; }
+    .problem-list strong { display: block; color: var(--secondary); margin-bottom: 6px; }
+    .steps { list-style: none; counter-reset: step; padding: 0; margin: 30px 0 0; }
+    .steps li { counter-increment: step; position: relative; padding: 0 0 25px 60px; font-size: 1.1rem; }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--secondary); color: white; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .steps strong { color: var(--secondary); }
+
+    /* Portfolio */
+    .tags { color: var(--primary); font-weight: 600; font-size: 0.9rem; }
+    .case-study { max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
+    .case-study h3 { color: var(--secondary); margin-top: 40px; }
+    .case-study li { margin-bottom: 10px; }
+    .references { font-size: 0.9rem; color: var(--text-light); padding-left: 0; list-style: none; }
+
     footer { background: var(--secondary); color: #9ca3af; padding: 80px 0; margin-top: 60px; }
     footer h3 { color: white; margin-bottom: 20px; }
     footer a { color: #9ca3af; text-decoration: none; }
@@ -162,23 +184,14 @@
     <a href="{{ '/' | relative_url }}" class="brand">
       <img src="{{ '/assets/logo.png' | relative_url }}" alt="Logo">
       <div class="brand-text">
-        <span class="brand-name">Ph.D. in Physics & Neuroscientist</span>
+        <span class="brand-name">Clinical EEG neuroscientist</span>
       </div>
     </a>
     <nav>
       <ul class="nav-links">
         <li class="nav-item"><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li class="nav-item"><a href="{{ '/mission' | relative_url }}">Mission</a></li>
-        <li class="nav-item"><a href="{{ '/about' | relative_url }}">About</a></li>
-        <li class="nav-item">
-          <a href="#">Services <small>▼</small></a>
-          <div class="dropdown-menu">
-            <a href="{{ '/services/management' | relative_url }}">Data Management</a>
-            <a href="{{ '/services/analysis' | relative_url }}">Data Analysis</a>
-            <a href="{{ '/services/automation' | relative_url }}">Data Automation</a>
-          </div>
-        </li>
-        <li class="nav-item"><a href="{{ '/contact' | relative_url }}" class="btn-nav">Work With Me</a></li>
+        <li class="nav-item"><a href="{{ '/about' | relative_url }}">About Me</a></li>
+        <li class="nav-item"><a href="{{ '/portfolio' | relative_url }}">Portfolio</a></li>
       </ul>
     </nav>
   </div>
@@ -195,8 +208,8 @@
       </div>
       <div>
         <h4 style="color:white">Quick Links</h4>
-        <p><a href="{{ '/mission' | relative_url }}">Mission</a></p>
         <p><a href="{{ '/about' | relative_url }}">About Me</a></p>
+        <p><a href="{{ '/portfolio' | relative_url }}">Portfolio</a></p>
       </div>
       <div>
         <h4 style="color:white">Contact</h4>
